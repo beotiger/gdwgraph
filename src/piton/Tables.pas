@@ -397,7 +397,7 @@ begin
      Forma[3,11].Code:=$30+NumOfPl;
      Forma[11,18].Code:=$30+Ctrl1Pl;
      Forma[12,18].Code:=$30+Ctrl2Pl;
-     if GameType=DEMO then S:='ДЕМО' else S:='ИГРУ';
+     if GameType=DEMO then S:='DEMO' else S:='GAME';
      PutStr2Forma(A,S,42);
      if (MenuTime mod 10)<7 then C.Code:=20 else C.Code:=Blank;
      C.Attr:=49;
