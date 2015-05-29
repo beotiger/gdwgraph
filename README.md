@@ -5,7 +5,7 @@ This is cross-compiling sources for Free Pascal (http://www.freepascal.org/) Del
 
 See README.compile in src folder for further instructions on building sources.
 
-See REAME-*.txt files in data folder for brief description on each project.
+See README-*.txt files in data folder for brief description on each project.
 
 gdwgraph includes 2 classic games MAN & PITON.
 
@@ -31,7 +31,7 @@ Some neat screenshots of VGA13 graphics (window 320x200 multiplied by 2, e.g. in
 </p>
 
 <p>
- <h4>Man level 5</h4>
+ <h4>Man level 5 (double screen)</h4>
  <img src="http://beotiger.com/inc/scr/man1scr.jpg" alt="MAN1_SCR">
 </p>
 <p>
