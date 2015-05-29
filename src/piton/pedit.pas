@@ -585,11 +585,11 @@ begin
 		Locate(9,5);
 		Mywrite('Save '+s+'?');
 
-		Locate(11,7);MyWrite(' Да  Нет ');
+		Locate(11,7);MyWrite('Yes  No  ');
 		if Choose then
-			PutString(LOCY,' Да ',3,3)
+			PutString(LOCY,'Yes ', 3, 3)
 		else
-			PutString(LOCN,' Нет ',3,3);
+			PutString(LOCN,' No  ', 3, 3);
 
 		gdwSwapBuf;
 
@@ -672,7 +672,7 @@ begin
 
      SDLK_F2: if smod and KMOD_SHIFT <> 0 then begin if YesNo(IntroFileName) then SaveIntroFile(IntroFileName) end
      	else if smod and KMOD_CTRL <> 0 then Map:=MapBuf
-		else if YesNo('Level '+IntToStr(NumLev)) then SaveMap(NumLev);
+		else if YesNo('Level ' + IntToStr(NumLev)) then SaveMap(NumLev);
      SDLK_F3:if smod and KMOD_SHIFT <> 0 then LoadIntroFile(IntroFileName) else
      if smod and KMOD_CTRL <> 0 then SummonThing(MySym,MyStep)
      else ReadMap(NumLev);
