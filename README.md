@@ -19,13 +19,13 @@ Some neat screenshots of VGA13 graphics (window 320x200 multiplied by 2, e.g. in
 
 <p>
  <h4>Man intro screen</h4>
- <img src="http://beotiger.com/inc/src/man0scr.jpg" alt="MAN0_SCR">
+ <img src="http://beotiger.com/inc/scr/man0scr.jpg" alt="MAN0_SCR">
 </p>
 <p>
  <h4>Piton menu screen</h4>
- <img src="http://beotiger.com/inc/src/piton0scr.jpg" alt="PITON0_SCR">
+ <img src="http://beotiger.com/inc/scr/piton0scr.jpg" alt="PITON0_SCR">
 </p>
 <p>
  <h4>Demotest shows Mandelbrot fractal</h4>
- <img src="http://beotiger.com/inc/src/demotestscr.jpg" alt="DEMOTEST_SCR">
+ <img src="http://beotiger.com/inc/scr/demotestscr.jpg" alt="DEMOTEST_SCR">
 </p>
