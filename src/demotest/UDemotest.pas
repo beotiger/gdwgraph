@@ -295,7 +295,7 @@ procedure ShowColors;		{ показваем цвета  VGA-13 }
 	begin
 		ClearDevice;
                 Dis.x:=7;Dis.y:=2;
-		PutString(Dis,'Тест цветов VGA-13',3,0);
+		PutString(Dis,'Colors test VGA-13',3,0);
 		for i:=6 to 13 do
 			for j:=3 to 34 do begin
             Dis.x:=j;
@@ -313,7 +313,7 @@ procedure ShowTable;		{ показываем таблицу символов }
 	begin
 		ClearDevice;
                 Position.x:=5;Position.y:=2;
-		PutString(Position,'Тест таблицы символов',2,0);
+		PutString(Position,'Test of tables of characters',2,0);
 		for Code:=0 to 511 do begin
 			Sym.Code:=Code;
 			Sym.Attr:=Color;
@@ -462,8 +462,8 @@ procedure BigMovingString;	{ бльшая движущаяся cтрока }
 var 	PosStr:integer;
 const
 	Str:string =
-'Вы просмотрели DemoTest библиотеки <gdwgraph.pas>. Для выхода ' +
-'в меню нажмите любую клавишу. Искренне Ваш - gDw-2000, лето! ';
+'You have finished to watch DemoTest. Press any key ' +
+'to quit to menu. Sincerely Yours - gDw-2000, summer! ';
 Str2:string = '                  ';
 var StrLength:integer;	{длина строки}
 procedure MoveIt;	{ непосредственное движение }
@@ -591,35 +591,35 @@ var
 begin
    ClearDevice;
    CR.x:=2;Cr.y:=2;
-	PutString(CR,'Названия ',6,3);
+	PutString(CR,'Titles   ',6,3);
    inc(CR.y);
-	PutString(CR,'    теста',6,3);
+	PutString(CR,'    tests',6,3);
    CR.x:=13;dec(CR.y);
-	PutString(CR,' Данная ',13,3);
+	PutString(CR,' Given  ',13,3);
    inc(CR.y);
-	PutString(CR,'скорость',13,3);
+	PutString(CR,'speed   ',13,3);
    CR.x:=22;dec(CR.y);
-	PutString(CR,'Эталонная',11,3);
+	PutString(CR,'Etalon   ',11,3);
    inc(CR.y);
-	PutString(CR,' скорость',11,3);
+	PutString(CR,' speed   ',11,3);
    CR.x:=33;dec(CR.y);
-	PutString(CR,'Данная/',9,3);
+	PutString(CR,' Given/',9,3);
    inc(CR.y);
-	PutString(CR,' эталон',9,3);
+	PutString(CR,' etalon',9,3);
 
 { выводим названия тестов }
    CR.x:=2;CR.y:=5;
-	PutString(CR,'ТОЧКИ',15,0);
+	PutString(CR,'DOTS',15,0);
    inc(CR.y,2);
-	PutString(CR,'СИМВОЛЫ',15,0);
+	PutString(CR,'CHARS',15,0);
    inc(CR.y,2);
-	PutString(CR,'КВАДРАТЫ',15,0);
+	PutString(CR,'SQUARES',15,0);
    inc(CR.y,2);
-	PutString(CR,'КРУГИ',15,0);
+	PutString(CR,'CIRCLES',15,0);
    inc(CR.y,2);
-	PutString(CR,'БОЛЬШИЕ',15,0);
+	PutString(CR,'BIG',15,0);
    inc(CR.y);
-	PutString(CR,'СИМВОЛЫ',15,0);
+	PutString(CR,'CHARS',15,0);
 
 {  выводим соответсвующие  числа }
 	for i:=1 to 5 do begin
@@ -629,17 +629,17 @@ begin
       PutString(CR,s,15,0);
 	end {for};
         CR.x:=9;CR.y:=16;
-	PutString(CR,'Числа под скоростью указывают',14,0);
+	PutString(CR,'Numbers under speed show',14,0);
         CR.x:=3;inc(CR.y);
-	PutString(CR,'количество объектов, выведенных за 1с.',14,0);
+	PutString(CR,'ojects count, drawn in 1s.',14,0);
         inc(CR.y,2);
-	PutString(CR,'Эталонная система - ',13,0);
+	PutString(CR,'Etalon system - ',13,0);
         CR.x:=23;
 	PutString(CR,'386DX-40(AMD)',13,3);
         CR.x:=3;CR.y:=21;
-	PutString(CR,'Общий коэффициент вашей системы по',101,0);
+	PutString(CR,'Coefficient of this machine',101,0);
         inc(CR.y);
-	PutString(CR,'отношению к эталонной равен',101,0);
+	PutString(CR,'to etalons machine is',101,0);
 	CR.X:=31;CR.Y:=22;
 	First:=0;			{ начинаем вычислять общий кооэффициент }
 	for i:=1 to 5 do First:=First+ThisMachine[i];
@@ -706,7 +706,7 @@ begin
 end;
 
 function ChooseColor(CurColor:byte):byte;
-const	Str:string = 'Выберите цвет';
+const	Str:string = 'Choose color';
         Sym:Symbol = (Code:32;Attr:0);
 		A:Pixel	= (x:28;y:20);
         B:Pixel	= (x:292;y:100);
@@ -965,24 +965,24 @@ begin	{ -- M A I N -- }
 
 		ClearDevice;
                 Z.x:=3;Z.y:=1;
-		PutString(Z,'МЕНЮ:',15,3);
+		PutString(Z,'Menu:',15,3);
                 Z.x:=1;Z.y:=3;
-		PutString(Z,'F1.Демонстрация',100,0);
+		PutString(Z,'F1. Demonstration',100,0);
                 inc(Z.y);
-		PutString(Z,'F2.Бенчмарка...',101,0);
+		PutString(Z,'F2. Benchmark',101,0);
                 inc(Z.y);
-		PutString(Z,'F3.Интередактор',102,0);
+		PutString(Z,'F3. Intereditor',102,0);
                 inc(Z.y,2);
 
-		PutString(Z,'F4.Ещё тест?',myGreen,0);
+		PutString(Z,'F4. More test?',myGreen,0);
                 inc(Z.y,2);
 
-		PutString(Z,'F5. Фрактал Мандельбротта',myAqua,0);
+		PutString(Z,'F5. Fractal of Mandelbrott',myAqua,0);
                 inc(Z.y,1);
-		PutString(Z,'F6. Фрактал - папоротник',myAqua,0);
+		PutString(Z,'F6. Fractal - fern',myAqua,0);
                 inc(Z.y,5);
 
-		PutString(Z,'ESC.Выход в BIOS',myRed,0);
+		PutString(Z,'ESC. Quit to OS',myRed,0);
     gdwSwapBuf;
                 repeat
                 	Key:=InKey
@@ -1015,3 +1015,4 @@ end;	{ -- M A I N -- }
 -- г.Волгоград, ул.Твардовского 9-16,  г-ну Плешакову А.В.
 --	20 июня 2000 года от р.Хр.																  }
 end.
+
