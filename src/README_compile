@@ -1,0 +1,152 @@
+README compile sources
+
+The sources are written in Pascal language for FPC/Delphi dialect
+FPC - Free Pascal Compiler http://www.freepascal.org - Delphi/Kylix compatible (mostly)
+
+SDL (Simple Direct Media Library) and OpenGL (Open Graphics Library) libraries are also needed.
+If some libraries are not found check Options - Directories - Units path in FPC IDE
+SDL version - 1.2
+
+All sources use internal library sdlglgdwgraph.pas,
+which is a simple wrapper for SDL/OpenGL initialization
+and primitives drawing. It's situated in src folder
+and all main files refer to it.
+
+The main pascal sources are:
+1. src/demotest/demotest.pas - demonstration library
+1a. src/demotest/knop.pas - mystic pas for Knopp
+2. src/man/man.pas - game MAN
+3. src/man/editman.pas - level editor for game MAN
+4. src/piton/piton.pas - game PITON (python-style game)
+5. src/piton/peditor.pas - level editor for game PITON
+
+There is some information in files README-*.txt in the data directory.
+
+Tested on Windows/Linux only.
+
+To run under Windows you will need SDL.dll file from https://www.libsdl.org/download-1.2.php
+For Linux distros SDL usually installed as an appropriate package,
+for example for Debian-like systems (Debian/Mint/Ubuntu etc.) run:
+$ apt install libsdl1.2-dev
+Also you may download sources or shared libraries from https://www.libsdl.org/download-1.2.php
+
+
+To compile under OS'es supporting FPC/SDL/OpenGL:
+
+1. Download and install FPC from http://www.freepascal.org (see below Linux-way for Linux)
+2. Open FPC IDE - run fp.exe on Windows or type fp in Linux command line (in console or terminal).
+
+
+3. For Linux: add FPC system libraries directory to Options - Directoris - Units:
+e.g.: /usr/lib/fpc/2.6.2/units/x86_64-linux/*
+
+Check correct path here: 2.6.2 - current version of FPC
+x86_64-linux - for 64-bit Linux, for 32-bit Linux it can be i386-linux, and so on.
+
+
+
+
+4. In Options - Compiler - Compiler mode set Delphi compatible.
+
+OK, now we are ready to build something.
+
+5. Choose main source file to build (F3 or File - Open...). Main source files are listed above.
+6. Change dir (File - Change dir...) to current source, if some files can not be found
+7. Press F9 to build.
+
+8. If there are no errors move newly created executable file 
+	(e.g. with .exe extension on Windows, file name without extension for Linux)
+	from source directory to data directory, where all data files are placed,
+	and run it. Enjoy!
+
+9. Run clear.bat on Windows or clear.sh on Linux ($ sh clear.sh)
+	to delete obsolete FPC compiling objects from current directory.
+
+
+
+Linux way:
+$ uname -a
+Linux justy 3.13.0-51-generic-tuxonice #84~ppa1-Ubuntu SMP Wed Apr 29 19:39:16 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux
+
+(Linux Mint)
+
+$ apt search fpc
+p   fpc                             - Free Pascal - SDK suite dependency package
+p   fpc-2.6.2                       - Free Pascal - SDK-2.6.2 suite
+...
+
+$ apt install fpc
+New packages will be installed:
+  fp-compiler-2.6.2 fp-ide-2.6.2 fp-units-base-2.6.2 fp-units-db-2.6.2
+ ... more packages are shown here
+Suggested packages:
+  fp-docs-2.6.2 mingw32-binutils lazarus libcairo2-doc libgtk2.0-doc
+  libpango1.0-doc imagemagick
+Recommended packages:
+  fp-utils-2.6.2 libforms-dev libgd-dev libggi2-dev libgraphviz-dev
+  libxxf86dga-dev debhelper
+Need to download 29,2 Mb.  
+Continue?[Y/n]Y
+
+After installations all libraries go to /usr/lib/fpc/2.6.2/units/x86_64-linux
+There they are:
+$ cd /usr/lib/fpc/2.6.2/units/x86_64-linux
+$ ls
+a52      fcl-async    fcl-registry  gdbm     iconvenc     modplug    oracle    rtl       x11
+aspell   fcl-base     fcl-res       ggi      imagemagick  mysql      pasjpeg   sdl       xforms
+bfd      fcl-db       fcl-web       gmp      imlib        ncurses    paszlib   sqlite    zlib
+bzip2    fcl-extra    fcl-xml       gnome1   ldap         newt       pcap      svgalib   zorba
+cairo    fcl-fpcunit  fftw          graph    libcurl      numlib     postgres  symbolic
+cdrom    fcl-image    fpgtk         gtk1     libgd        odbc       proj4     syslog
+chm      fcl-js       fpindexer     gtk2     libpng       oggvorbis  ptc       tcl
+dblib    fcl-json     fpmkunit      hash     libsee       openal     pthreads  unzip
+dbus     fcl-net      fppkg         hermes   libxml2      opencl     pxlib     users
+dts      fcl-passrc   fv            httpd22  lua          opengl     regexpr   utmp
+fastcgi  fcl-process  gdbint        ibase    mad          openssl    rsvg      uuid
+
+Good. sdl and opengl are present. Good.
+
+Now we can type fp to start FreePAscal integrated IDE and go on with building sources
+(see step 3 in instructions above)
+
+
+== ======= ==
+== RUSSIAN ==
+========== ==
+Язык программирования - Паскаль, диалект Free Pascal Compiler (FPC)
+FPC обладает совместимостью с Дельфи/Киликс (большей частью)
+
+Компилировать теоретически возможно на любой платформе,
+где есть FPC, а также библиотеки SDL (Simple Direct Media Library)
+и OpenGL. Проверялось только на Windows/Linux.
+
+
+Основные файлы такие:
+1. src/demotest/demotest.pas - тест/демонстрация, работает с ошибками,
+															так я её не переделал под двойной буфер достойно.
+2. src/man/man.pas - игра MAN
+3. src/man/editman.pas - редактор уровней к игре MAN
+4. src/piton/piton.pas - игра PITON (игра в стиле Питончика, которые поедает кроликов и растёт на глазах)
+5. src/piton/peditor.pas - редактор уровней к игре PITON
+
+Описания клавиш к играм и редакторам находятся в файлах README-*.txt в основной папке.
+
+Общий процесс компиляции под FPC IDE:
+1. Скачайте и установите FPC с http://www.freepascal.org
+
+2. Откройте FPC IDE (fp.exe/fp).
+
+2.1 Под Линукс может потребоваться добавить системные библиотеки FPC в Units список
+	(Options - Directoris - Units): например строку /usr/lib/fpc/2.6.2/units/x86_64-linux/*
+	для FPC версии 2.6.2 и 64-битной системы.
+2.2 Также надо указать компилятору режим Delphi-compatible (Delphi-совместимый)
+	в Options - Compiler - Compiler mode
+	
+3. Выберите исходник. (клавиша F3 или меню File - Open...).
+4. Смените рабочий каталог среды (меню File - Change Dir...) на каталог исходника.
+5. Нажмите F9 для сборки.
+6. Если нет ошибок - переместите полученный бинарник (исполняемый файл) из папки с исходником
+		в папку data, где хранятся все данные для программ и запустите его для пробы.
+
+7. Для очистки каталога с исходником выполните clear.bat в Windows или clear.sh в Linux (sh clear.sh),
+		чтобы удалить ненужные файлы, оставляемые FPC в процессе сборки программ.
