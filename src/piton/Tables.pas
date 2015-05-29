@@ -187,7 +187,7 @@ procedure TriumphTable.InitForma;
 var       Pix:Pixel;Sym:Symbol;S:string[2];
 				x,y:integer;
 const     Tochka:Symbol = (Code:ord('.');Attr:37);
-          TStr:string[16]='Таблица рекордов';
+          TStr:string[16]='Table of records';
 begin
      for y:=1 to 14 do for x:=1 to 28 do begin
      		Pix.x := x;
@@ -341,11 +341,11 @@ begin
 end;
 procedure Menu.InitForma;
 var i,j:integer;
-const MenuStr:array[1..13] of string[19]=('>Меню<','Игроков:1','Старт игры:',
-                           'Питон классический','Питон универсальный',
-                           'Удавы Судьбы','Управление:','Игрок 1:клава 1',
-                           'Игрок 2:клава 2','Таблица рекордов','Возврат в',
-                           'Выход','gDw');
+const MenuStr:array[1..13] of string[19]=('>Menu<','Players:1','Game start:',
+                           'Piton classic','Piton universal',
+                           'Pitons destiny','Control:','Player 1:keyb. 1',
+                           'Player 2:keyb 2','Table of records','Return to',
+                           'Quit','gDw');
       MenuPos:array[1..13] of Pixel = ((x:9;y:1),(x:3;y:3),(x:3;y:5),(x:4;y:6),
                            (x:4;y:7),(x:4;y:8),(x:3;y:10),(x:4;y:11),
                            (x:4;y:12),(x:3;y:14),(x:3;y:16),(x:3;y:18)
