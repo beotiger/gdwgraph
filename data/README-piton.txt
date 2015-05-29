@@ -1,3 +1,29 @@
+Piton. Python-like game.
+
+Control keys:
+
+Intro:
+ESC: menu open/close
+F10: fast quit to OS
+F5: double/single view
+
+Game:
+One can choose control keys for both players in menu.
+
+1 player: ARROWS to move Piton. 
+		Doubled press of an arrow in Piton's moving direction will speed it up,
+		and from moving direction will slow it down.
+		
+2 player: W,D,S,A - moving. Speeding/slowing work as for the first player.
+
+F5:  double/single view (in one player mode only)
+F10: fast quit to OS
+Shift+Tab: skip to next level
+
+
+********************
+**   IN RUSSIAN  ***
+********************
 Питон.
 
 Со временем питон теряет часть себя от голода.
@@ -34,4 +60,5 @@ F5: двойной/одинарный экран
 
 F5: двойной/одинарный экран (только в режиме одного игрока)
 F10: быстрый выход в ОС
+Shift+Tab: прыгнуть на следующий уровень
 
