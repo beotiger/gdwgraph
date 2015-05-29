@@ -212,8 +212,8 @@ var       i,j:integer;S:string[5];A:Pixel;S2:string[3];
 			Sym:Symbol;
 const     Head1:Symbol=(Code:4;Attr:0);
           Head2:Symbol=(Code:4;Attr:1);
-          CondState:array[State] of string[6] = (' нет  ','голод ',' Бог  ',
-                                              'застыл','погиб ','рожден');
+          CondState:array[State] of string[6] = ('empty ','hunger',' God  ',
+                                              'frozen',' dead ',' born ');
 procedure PutStr2MAP(A:Pixel;Info:string;Pal:byte);
 var i:integer;L:byte;ss:string;bb:byte;
 begin
