@@ -29,3 +29,29 @@ Some neat screenshots of VGA13 graphics (window 320x200 multiplied by 2, e.g. in
  <h4>Demotest shows Mandelbrot fractal</h4>
  <img src="http://beotiger.com/inc/scr/demotestscr.jpg" alt="DEMOTEST_SCR">
 </p>
+
+<p>
+ <h4>Man level 5</h4>
+ <img src="http://beotiger.com/inc/scr/man1scr.jpg" alt="MAN1_SCR">
+</p>
+<p>
+ <h4>Man level 9</h4>
+ <img src="http://beotiger.com/inc/scr/man2scr.jpg" alt="MAN2_SCR">
+</p>
+
+<p>
+<h4>Piton game</h4>
+ <img src="http://beotiger.com/inc/scr/piton1scr.jpg" alt="PITON1_SCR">
+</p>
+
+<p>
+<h4>Double screen in Piton game</h4>
+ <img src="http://beotiger.com/inc/scr/piton2scr.jpg" alt="PITON1_SCR">
+</p>
+
+<p>
+ <h4>Symbol image editor in Editman</h4>
+ <img src="http://beotiger.com/inc/scr/editman1scr.jpg" alt="MAN2_SCR">
+</p>
+
+
