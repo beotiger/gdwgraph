@@ -59,7 +59,7 @@ OK, now we are ready to build something.
 	from source directory to data directory, where all data files are placed,
 	and run it. Enjoy!
 
-9. Run clear.bat on Windows or clear.sh on Linux ($ sh clear.sh)
+9. Run clear.bat on Windows or clear.sh on Linux ($ bash clear.sh)
 	to delete obsolete FPC compiling objects from current directory.
 
 
@@ -106,14 +106,14 @@ fastcgi  fcl-process  gdbint        ibase    mad          openssl    rsvg      u
 
 Good. sdl and opengl are present. Good.
 
-Now we can type fp to start FreePAscal integrated IDE and go on with building sources
+Now we can type fp to start FreePascal integrated IDE and go on with building sources
 (see step 3 in instructions above)
 
 
 == ======= ==
 == RUSSIAN ==
 ========== ==
-Язык программирования - Паскаль, диалект Free Pascal Compiler (FPC)
+Язык программирования - Паскаль, диалект Free Pascal Compiler (FPC) - Delphi совместимый
 FPC обладает совместимостью с Дельфи/Киликс (большей частью)
 
 Компилировать теоретически возможно на любой платформе,
@@ -148,5 +148,5 @@ FPC обладает совместимостью с Дельфи/Киликс (
 6. Если нет ошибок - переместите полученный бинарник (исполняемый файл) из папки с исходником
 		в папку data, где хранятся все данные для программ и запустите его для пробы.
 
-7. Для очистки каталога с исходником выполните clear.bat в Windows или clear.sh в Linux (sh clear.sh),
+7. Для очистки каталога с исходником выполните clear.bat в Windows или clear.sh в Linux (bash clear.sh),
 		чтобы удалить ненужные файлы, оставляемые FPC в процессе сборки программ.
